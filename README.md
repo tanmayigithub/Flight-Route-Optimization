@@ -1,0 +1,1 @@
+Designed a full-stack application to optimize flight routes using Dijkstra’s shortest path algorithm, enabling users to find the most efficient travel path between cities. Implemented an interactive React frontend and REST API backend for computation.
