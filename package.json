@@ -1,0 +1,43 @@
+{
+  "name": "flight-route-optimization-backend",
+  "version": "1.0.0",
+  "description": "Backend for Flight Route Optimization System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "echo 'Building backend...' && npm run analyze",
+    "test": "echo 'No tests specified yet'",
+    "analyze": "node build-optimizer.js",
+    "build:optimized": "node build-optimizer.js && npm run build",
+    "deploy:optimized": "npm run build:optimized && echo \"Deploying optimized build...\"",
+    "start:optimized": "npm run analyze && npm start",
+    "start:backend": "node server.js",
+    "start:frontend": "cd .. && npm start",
+    "start:both": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "build:frontend": "cd .. && npm run build",
+    "deploy:full": "npm run build:frontend && npm run start:backend"
+  },
+  "keywords": [
+    "flight",
+    "route",
+    "optimization",
+    "backend",
+    "nodejs"
+  ],
+  "author": "Tanmayi",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.1.10"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
